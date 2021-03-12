@@ -9,7 +9,7 @@ locale: "en"
 variableGroups:
   - title: "Base configuration"
     variables:
-      - ${targetCompartment}
+      - ${compartment_ocid}
       - ${ad}
       - ${ssh_pub_key}      
 variables:
