@@ -16,6 +16,7 @@ variables:
   compartment_ocid:
     title: "Target Compartment"
     type: oci:identity:compartment:id
+    required: true
   ad:
     type: oci:identity:availabilitydomain:name
     dependsOn:
