@@ -19,7 +19,7 @@ variables:
   ad:
     type: oci:identity:availabilitydomain:name
     dependsOn:
-      compartmentId: ${targetCompartment}
+      compartmentId: ${compartment_ocid}
     visible: complexExpression
     required: true
     description: "Availability Domain"
