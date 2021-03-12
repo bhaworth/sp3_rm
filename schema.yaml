@@ -1,0 +1,34 @@
+---
+title: SP3 Build
+description: SP3 Base Build
+schemaVersion: 0.1
+version: "20210312"
+logoUrl: >
+  https://cloudmarketplace.oracle.com/marketplace/content?contentId=80357668
+
+locale: "en"
+
+variableGroups:
+  - title: "Base configuration"
+    variables:
+      - ${targetCompartment}
+      - ${ad}
+      - ${ssh_pub_key}
+      
+
+variables:
+  targetCompartment:
+    title: "Target Compartment"
+    type: oci:identity:compartment:id
+  ad:
+    type: oci:identity:availabilitydomain:name
+    dependsOn:
+      compartmentId: ${targetCompartment}
+    visible: complexExpression
+    required: true
+    description: "Availability Domain"
+    title: "Availability Domain"
+  ssh_key:
+    type: string
+    title: "Public SSH key"
+    required: true
