@@ -13,7 +13,7 @@ variableGroups:
       - ${ad}
       - ${ssh_pub_key}      
 variables:
-  targetCompartment:
+  compartment_ocid:
     title: "Target Compartment"
     type: oci:identity:compartment:id
   ad:
